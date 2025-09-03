@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mathieu COULIBALY | Développeur Fullstack</title>
+    <meta name="description" content="Développeur fullstack passionné en recherche d'alternance. Découvrez mes projets, compétences et contactez-moi pour collaborer.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="antialiased">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="custom-cursor cursor-outer"></div>
+    <div class="custom-cursor cursor-inner"></div>
+
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white hoverable">Mathieu COULIBALY.</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#profil" class="text-gray-200 hover:text-white transition-colors duration-300 hoverable nav-link">Profil</a>
+                <a href="#realisations-section" class="text-gray-200 hover:text-white transition-colors duration-300 hoverable nav-link">Réalisations</a>
+                <a href="#services-container" class="text-gray-200 hover:text-white transition-colors duration-300 hoverable nav-link">Services</a>
+                <a href="#competences" class="text-gray-200 hover:text-white transition-colors duration-300 hoverable nav-link">Compétences</a>
+                <a href="#temoignages" class="text-gray-200 hover:text-white transition-colors duration-300 hoverable nav-link">Témoignages</a>
+                <a href="#cursus" class="text-gray-200 hover:text-white transition-colors duration-300 hoverable nav-link">Cursus</a>
+                <a href="#contact" class="bg-violet-600 text-white px-5 py-2 rounded-full hover:bg-violet-500 transition-colors duration-300 hoverable nav-link">Contact</a>
+            </nav>
+            <button class="md:hidden text-white hoverable">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="profil" class="min-h-screen flex items-center justify-center text-center px-6 scroll-snap-align-start">
+            <div class="max-w-4xl">
+                <h1 id="hero-title" class="text-5xl md:text-8xl font-bold tracking-tighter text-white">
+                    <span class="split-text">Mathieu</span> <span class="split-text">COULIBALY</span> <span class="split-text">Developpeur</span> <span class="split-text">Fullstack.</span>
+                </h1>
+                <p class="mt-8 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto section-hidden">
+                    Développeur passionné en recherche d'une alternance de 1 ans avec un rythme de 2 semaines de cours / 3 semaines en entreprise. je veux transformer des idées complexes en solutions web et mobiles élégantes et performantes.
+                </p>
+                <div class="mt-8 flex justify-center space-x-4 section-hidden">
+                    <a href="URL_DE_VOTRE_CV" download class="inline-flex items-center bg-violet-600 text-white px-6 py-3 rounded-full hover:bg-violet-500 transition-colors duration-300 font-semibold hoverable">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download mr-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Télécharger mon CV
+                    </a>
+                    <a href="https://github.com/kafoum" target="_blank" class="inline-flex items-center bg-gray-700 text-white px-6 py-3 rounded-full hover:bg-gray-600 transition-colors duration-300 font-semibold hoverable">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.5a6.67 6.67 0 0 0-6 0c-2.73-1.85-3.91-.5-3.91-.5A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0 0 4.54c0 5.4 3.3 6.63 6.44 7A3.37 3.37 0 0 0 18 19v3.87"></path></svg>
+                        Voir mon GitHub
+                    </a>
+                     <a href="https://www.linkedin.com/in/kafou-coulibaly" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-500 transition-colors duration-300 font-semibold hoverable">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin mr-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        Voir mon LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="biographie" class="min-h-screen py-20 md:py-32 px-6 scroll-snap-align-start">
+            <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="section-hidden">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">À propos de moi</h2>
+                    <p id="bio-text" class="text-gray-200 mb-4">
+                        Passionée d'informatique, de codage, Programmation, je recherche à toujours me perfectionner dans ce domaine c'est dans cette optique que je suis actuellement à la recherche d'une alternance de 2 ans en Developpement Web des que possible. je souhaite approfondir mes connaissances dans ce domaine en constante évolution.
+                    </p>
+                    <div class="mt-8 text-gray-200">
+                        <p class="font-bold">Kafou COULIBALY</p>
+                        <p class="mt-2">+33 6 05 97 32 85</p>
+                        <p>kafoumathieu.coulibaly@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="section-hidden h-80 w-80 mx-auto bg-gray-800 rounded-full overflow-hidden flex items-center justify-center">
+                    <img src="https://images.weserv.nl/?url=https://i.ibb.co/yc3prZ1S/profil.jpg&w=800&fit=cover&mask=circle" alt="profil" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section id="services-container" class="relative min-h-screen scroll-snap-align-start">
+            <div id="horizontal-section" class="overflow-hidden">
+                <div class="horizontal-track flex space-x-12 px-12">
+                    <div class="service-card flex-shrink-0 w-[80vw] md:w-[40vw] p-8 bg-gray-900 rounded-lg section-hidden">
+                        <h3 class="text-3xl font-bold mb-4">Développement Web</h3>
+                        <p class="text-gray-200">Création de sites web sur-mesure, rapides et optimisés pour le référencement, en utilisant des technologies de pointe comme Next.js.</p>
+                    </div>
+                    <div class="service-card flex-shrink-0 w-[80vw] md:w-[40vw] p-8 bg-gray-900 rounded-lg section-hidden">
+                        <h3 class="text-3xl font-bold mb-4">Applications Mobiles</h3>
+                        <p class="text-gray-200">Conception et développement d'applications mobiles cross-platform avec React Native pour une expérience utilisateur native.</p>
+                    </div>
+                    <div class="service-card flex-shrink-0 w-[80vw] md:w-[40vw] p-8 bg-gray-900 rounded-lg section-hidden">
+                        <h3 class="text-3xl font-bold mb-4">UI/UX Design</h3>
+                        <p class="text-gray-200">Prototypage et design d'interfaces utilisateur centrées sur l'ergonomie et l'esthétique pour maximiser l'engagement.</p>
+                    </div>
+                     <div class="service-card flex-shrink-0 w-[80vw] md:w-[40vw] p-8 bg-gray-900 rounded-lg section-hidden">
+                        <h3 class="text-3xl font-bold mb-4">Backend & API</h3>
+                        <p class="text-gray-200">Développement d'API RESTful robustes et sécurisées avec Node.js et Express pour alimenter vos applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="realisations-section" class="min-h-screen py-20 md:py-32 px-6 scroll-snap-align-start">
+            <div class="container mx-auto section-hidden">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Mes Réalisations</h2>
+                
+                <div class="flex flex-col gap-8 bg-gray-900 rounded-lg p-8">
+                    <div class="project-menu flex flex-col md:flex-row justify-between items-center w-full gap-4">
+                        <a href="#" class="project-tab text-2xl font-semibold p-4 rounded-md transition-colors duration-300 hover:bg-gray-800 hoverable active" data-project-id="0">Projet E-commerce</a>
+                        <a href="#" class="project-tab text-2xl font-semibold p-4 rounded-md transition-colors duration-300 hover:bg-gray-800 hoverable" data-project-id="1">Appli Mobile de Recettes</a>
+                        <a href="#" class="project-tab text-2xl font-semibold p-4 rounded-md transition-colors duration-300 hover:bg-gray-800 hoverable" data-project-id="2">Portfolio 3D</a>
+                        <a href="#" class="project-tab text-2xl font-semibold p-4 rounded-md transition-colors duration-300 hover:bg-gray-800 hoverable" data-project-id="3">Système de Design</a>
+                    </div>
+                    
+                    <div id="project-display" class="relative">
+                        <div id="project-content-0" class="project-content active loading-container">
+                            <div class="h-96 w-full bg-gray-800 rounded-md overflow-hidden flex items-center justify-center mb-6">
+                                <img id="project-image-0" class="w-full h-full object-cover" src="https://images.weserv.nl/?url=https://images.unsplash.com/photo-1549692520-acc6669f6e0b&w=1200&fit=cover" alt="Image de Projet 1">
+                            </div>
+                            <h3 id="project-title-0" class="text-3xl font-bold mb-2">Projet E-commerce</h3>
+                            <p id="project-desc-0" class="text-gray-200 mb-4">E-commerce / Next.js</p>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <a href="https://exemple.com/site-projet-1" target="_blank" class="px-6 py-2 bg-violet-600 text-white font-semibold rounded-full hover:bg-violet-500 transition-colors duration-300 hoverable flex items-center justify-center space-x-2">
+                                    <span class="mr-2">🔗</span>
+                                    <span>Voir le site</span>
+                                </a>
+                                <a href="https://github.com/votre-utilisateur/repo-1" target="_blank" class="px-6 py-2 bg-gray-700 text-white font-semibold rounded-full hover:bg-gray-600 transition-colors duration-300 hoverable flex items-center justify-center space-x-2">
+                                    <span class="mr-2">🐙</span>
+                                    <span>Code GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="project-content-1" class="project-content hidden loading-container">
+                            <div class="h-96 w-full bg-gray-800 rounded-md overflow-hidden flex items-center justify-center mb-6">
+                                <img id="project-image-1" class="w-full h-full object-cover" src="https://images.weserv.nl/?url=https://images.unsplash.com/photo-1593062098008-251f92e3c048&w=1200&fit=cover" alt="Image de Projet 2">
+                            </div>
+                            <h3 id="project-title-1" class="text-3xl font-bold mb-2">Appli Mobile de Recettes</h3>
+                            <p id="project-desc-1" class="text-gray-200 mb-4">Application Mobile / React Native</p>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <a href="https://exemple.com/site-projet-2" target="_blank" class="px-6 py-2 bg-violet-600 text-white font-semibold rounded-full hover:bg-violet-500 transition-colors duration-300 hoverable flex items-center justify-center space-x-2">
+                                    <span class="mr-2">🔗</span>
+                                    <span>Voir le site</span>
+                                </a>
+                                <a href="https://github.com/votre-utilisateur/repo-2" target="_blank" class="px-6 py-2 bg-gray-700 text-white font-semibold rounded-full hover:bg-gray-600 transition-colors duration-300 hoverable flex items-center justify-center space-x-2">
+                                    <span class="mr-2">🐙</span>
+                                    <span>Code GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="project-content-2" class="project-content hidden loading-container">
+                            <div class="h-96 w-full bg-gray-800 rounded-md overflow-hidden flex items-center justify-center mb-6">
+                                <img id="project-image-2" class="w-full h-full object-cover" src="https://images.weserv.nl/?url=https://images.unsplash.com/photo-1579456254712-424a1b659c47&w=1200&fit=cover" alt="Image de Projet 3">
+                            </div>
+                            <h3 id="project-title-2" class="text-3xl font-bold mb-2">Portfolio 3D</h3>
+                            <p id="project-desc-2" class="text-gray-200 mb-4">Portfolio Interactif / GSAP</p>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <a href="https://exemple.com/site-projet-3" target="_blank" class="px-6 py-2 bg-violet-600 text-white font-semibold rounded-full hover:bg-violet-500 transition-colors duration-300 hoverable flex items-center justify-center space-x-2">
+                                    <span class="mr-2">🔗</span>
+                                    <span>Voir le site</span>
+                                </a>
+                                <a href="https://github.com/votre-utilisateur/repo-3" target="_blank" class="px-6 py-2 bg-gray-700 text-white font-semibold rounded-full hover:bg-gray-600 transition-colors duration-300 hoverable flex items-center justify-center space-x-2">
+                                    <span class="mr-2">🐙</span>
+                                    <span>Code GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="project-content-3" class="project-content hidden loading-container">
+                            <div class="h-96 w-full bg-gray-800 rounded-md overflow-hidden flex items-center justify-center mb-6">
+                                <img id="project-image-3" class="w-full h-full object-cover" src="https://images.weserv.nl/?url=https://images.unsplash.com/photo-1573496359142-b8d87085731b&w=1200&fit=cover" alt="Image de Projet 4">
+                            </div>
+                            <h3 id="project-title-3" class="text-3xl font-bold mb-2">Système de Design</h3>
+                            <p id="project-desc-3" class="text-gray-200 mb-4">Système de Design / Figma</p>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <a href="https://exemple.com/site-projet-4" target="_blank" class="px-6 py-2 bg-violet-600 text-white font-semibold rounded-full hover:bg-violet-500 transition-colors duration-300 hoverable flex items-center justify-center space-x-2">
+                                    <span class="mr-2">🔗</span>
+                                    <span>Voir le site</span>
+                                </a>
+                                <a href="https://github.com/votre-utilisateur/repo-4" target="_blank" class="px-6 py-2 bg-gray-700 text-white font-semibold rounded-full hover:bg-gray-600 transition-colors duration-300 hoverable flex items-center justify-center space-x-2">
+                                    <span class="mr-2">🐙</span>
+                                    <span>Code GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competences" class="min-h-screen py-20 md:py-32 px-6 scroll-snap-align-start">
+            <div class="container mx-auto section-hidden">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Mes Compétences</h2>
+                <div class="scrolling-container">
+                    <div class="scrolling-track">
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Logo">
+                            <strong class="text-white mt-2">React</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" alt="Next.js Logo">
+                            <strong class="text-white mt-2">Next.js</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Logo">
+                            <strong class="text-white mt-2">Node.js</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo">
+                            <strong class="text-white mt-2">JavaScript</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Logo">
+                            <strong class="text-white mt-2">HTML5</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Logo">
+                            <strong class="text-white mt-2">CSS3</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Logo">
+                            <strong class="text-white mt-2">PHP</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo">
+                            <strong class="text-white mt-2">Python</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C Logo">
+                            <strong class="text-white mt-2">C</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ Logo">
+                            <strong class="text-white mt-2">C++</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL Logo">
+                            <strong class="text-white mt-2">PostgreSQL</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://laravel.com/img/logotype.min.svg" alt="Laravel Logo">
+                            <strong class="text-white mt-2">Laravel</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://tailwindcss.com/_next/static/media/tailwindcss-logotype.4dc4ec357439eab726f67a5304e0950c.svg" alt="Tailwind CSS Logo">
+                            <strong class="text-white mt-2">Tailwind CSS</strong>
+                        </div>
+                        <div class="logo-item hoverable">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git Logo">
+                            <strong class="text-white mt-2">Git</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="temoignages" class="min-h-screen py-20 md:py-32 px-6 scroll-snap-align-start">
+            <div class="container mx-auto section-hidden">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Ce qu'ils disent de moi</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900 p-8 rounded-lg shadow-md">
+                        <p class="italic text-gray-200 mb-4">"Un travail exceptionnel, une attention aux détails incroyable et une communication fluide. Il a transformé notre idée en une réalité qui a dépassé nos attentes."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/50x50/374151/E5E7EB?text=JP" alt="Photo de Jean Pierre" class="rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-white">Jean-Pierre Dubois</h4>
+                                <p class="text-sm text-gray-400">CEO, Nom de l'entreprise</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-lg shadow-md">
+                        <p class="italic text-gray-200 mb-4">"Sa capacité à résoudre les problèmes complexes est impressionnante. Il est un véritable atout pour n'importe quelle équipe de développement."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/50x50/374151/E5E7EB?text=MA" alt="Photo de Marie Anne" class="rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-white">Marie-Anne Leclerc</h4>
+                                <p class="text-sm text-gray-400">CTO, Nom de l'entreprise</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-lg shadow-md">
+                        <p class="italic text-gray-200 mb-4">"Très proactif et créatif. Il a proposé des solutions innovantes qui ont grandement amélioré l'expérience utilisateur de notre application."</p>
+                        <div class="flex flex-wrap items-center">
+                            <img src="https://placehold.co/50x50/374151/E5E7EB?text=AL" alt="Photo de Alain Leroy" class="rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-white">Alain Leroy</h4>
+                                <p class="text-sm text-gray-400">Chef de projet, Nom de l'entreprise</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cursus" class="min-h-screen py-20 md:py-32 px-6 scroll-snap-align-start">
+            <div class="container mx-auto section-hidden">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Mon Cursus</h2>
+                <div class="max-w-2xl mx-auto">
+                    <div class="timeline-item">
+                        <div class="timeline-logo">
+                            <img src="https://placehold.co/60x60/374151/E5E7EB?text=NDL" alt="Logo du Collège Notre-Dame des Lacs 2" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div>
+                            <div class="text-gray-200">2018 - 2020</div>
+                            <h3 class="text-2xl font-semibold mt-1">Baccalauréat Scientifique, série D</h3>
+                            <p class="text-gray-400">Collège Notre-Dame des Lacs 2, Côte d'Ivoire</p>
+                            <p class="text-gray-200 mt-2">Obtention du baccalauréat, marquant la fin de mes études secondaires.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-logo">
+                            <img src="https://placehold.co/60x60/374151/E5E7EB?text=ESETEC" alt="Logo d'ESETEC" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div>
+                            <div class="text-gray-200">2020 - 2022</div>
+                            <h3 class="text-2xl font-semibold mt-1">Classe Préparatoire CPGE en BCPST</h3>
+                            <p class="text-gray-400">ESETEC, Yamoussoukro, Côte d'Ivoire</p>
+                            <p class="text-gray-200 mt-2">Formation intensive en Biologie, Chimie, Physique et Sciences de la Terre.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-logo">
+                            <img src="https://placehold.co/60x60/374151/E5E7EB?text=ESA" alt="Logo de l'ESA Angers" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div>
+                            <div class="text-gray-200">2022 - 2023</div>
+                            <h3 class="text-2xl font-semibold mt-1">Licence 3</h3>
+                            <p class="text-gray-400">École Supérieure des Agricultures (ESA), Angers, France</p>
+                            <p class="text-gray-200 mt-2">Formation dans le domaine des sciences agronomiques et de l'agriculture durable.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-logo">
+                            <img src="https://placehold.co/60x60/374151/E5E7EB?text=ECE" alt="Logo de l'ECE Paris" class="w-12 h-12 rounded-full">
+                        </div>
+                        <div>
+                            <div class="text-gray-200">2023 - Aujourd'hui</div>
+                            <h3 class="text-2xl font-semibold mt-1">Bachelor en Conception et Développement d'Application</h3>
+                            <p class="text-gray-400">ECE, Paris, France</p>
+                            <p class="text-gray-200 mt-2">Spécialisation dans le développement d'applications web et mobiles, en recherche d'alternance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="min-h-screen py-20 md:py-32 px-6 bg-gray-900 scroll-snap-align-start">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 section-hidden">Travaillons ensemble.</h2>
+                <p class="text-gray-200 mb-8 max-w-xl mx-auto section-hidden">
+                    Je suis toujours ouvert à de nouvelles opportunités. N'hésitez pas à me contacter pour discuter de votre projet.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 section-hidden">
+                    <a href="mailto:kafoumathieu.coulibaly@gmail.com" class="inline-block bg-violet-600 text-white px-8 py-4 rounded-full hover:bg-violet-500 transition-colors duration-300 text-lg font-semibold hoverable">
+                        <span class="mr-2">✉️</span> Mon Email
+                    </a>
+                    <a href="tel:+33605973285" class="inline-block bg-gray-700 text-white px-8 py-4 rounded-full hover:bg-gray-600 transition-colors duration-300 text-lg font-semibold hoverable">
+                        <span class="mr-2">📞</span> Mon Téléphone
+                    </a>
+                    <a href="https://www.linkedin.com/in/kafou-coulibaly" target="_blank" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-500 transition-colors duration-300 text-lg font-semibold hoverable">
+                        <span class="mr-2">💼</span> Mon LinkedIn
+                    </a>
+                    <a href="https://github.com/kafoum" target="_blank" class="inline-block bg-gray-700 text-white px-8 py-4 rounded-full hover:bg-gray-600 transition-colors duration-300 text-lg font-semibold hoverable">
+                        <span class="mr-2">🐙</span> Mon GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="bottom-nav" class="fixed bottom-0 left-0 w-full z-50 p-4 transition-all duration-300 backdrop-blur-md bg-gray-800 bg-opacity-70">
+        <nav class="flex justify-around items-center">
+            <a href="#profil" class="text-gray-200 text-sm flex flex-col items-center hover:text-white transition-colors nav-link hoverable">
+                <span class="text-xl">🏠</span>
+                <span class="mt-1">Profil</span>
+            </a>
+            <a href="#realisations-section" class="text-gray-200 text-sm flex flex-col items-center hover:text-white transition-colors nav-link hoverable">
+                <span class="text-xl">🎨</span>
+                <span class="mt-1">Projets</span>
+            </a>
+            <a href="#competences" class="text-gray-200 text-sm flex flex-col items-center hover:text-white transition-colors nav-link hoverable">
+                <span class="text-xl">🛠️</span>
+                <span class="mt-1">Compétences</span>
+            </a>
+            <a href="#temoignages" class="text-gray-200 text-sm flex flex-col items-center hover:text-white transition-colors nav-link hoverable">
+                <span class="text-xl">🗣️</span>
+                <span class="mt-1">Avis</span>
+            </a>
+            <a href="#cursus" class="text-gray-200 text-sm flex flex-col items-center hover:text-white transition-colors nav-link hoverable">
+                <span class="text-xl">🎓</span>
+                <span class="mt-1">Cursus</span>
+            </a>
+            <a href="#contact" class="text-gray-200 text-sm flex flex-col items-center hover:text-white transition-colors nav-link hoverable">
+                <span class="text-xl">✉️</span>
+                <span class="mt-1">Contact</span>
+            </a>
+        </nav>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

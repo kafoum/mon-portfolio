@@ -1,0 +1,237 @@
+:root {
+    --primary-bg: #121212;
+    --primary-text: #F3F3F3;
+    --secondary-text: #6B7280;
+    --accent-violet: #A77BFB;
+    --accent-cyan: #00FFFF;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: 'Inter', sans-serif;
+    cursor: none;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 9999;
+    transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s, border-color 0.2s;
+}
+
+.cursor-outer {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--accent-violet);
+}
+
+.cursor-inner {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-violet);
+    transform: translate(-50%, -50%);
+}
+
+.cursor-outer.hover {
+    transform: scale(2.5);
+    opacity: 0.5;
+}
+
+.cursor-inner.hover {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.cursor-color-bio .cursor-outer {
+    border-color: var(--accent-cyan);
+}
+
+.cursor-color-bio .cursor-inner {
+    background-color: var(--accent-cyan);
+}
+
+.cursor-color-realisations .cursor-outer {
+    border-color: var(--accent-violet);
+}
+
+.cursor-color-realisations .cursor-inner {
+    background-color: var(--accent-violet);
+}
+
+/* Animations & Scroll Effects */
+.split-char {
+    display: inline-block;
+}
+
+.section-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.header-scrolled {
+    opacity: 0;
+    transform: translateY(-100px);
+    pointer-events: none;
+}
+
+#bottom-nav {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+#bottom-nav.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#horizontal-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.horizontal-track {
+    display: flex;
+    will-change: transform;
+}
+
+.loading-container {
+    position: relative;
+    min-height: 400px;
+}
+
+.loading-container.is-loading {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.loading-container.is-loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--primary-text);
+    border-top: 4px solid var(--accent-violet);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 10;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Project Menu */
+.project-menu a.active {
+    background-color: #2D3748;
+    color: var(--accent-violet);
+}
+
+.project-content {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.project-content.active {
+    opacity: 1;
+}
+
+/* Background Canvas */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Timeline */
+.timeline-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 50px;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-violet);
+}
+
+.timeline-item:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 7px;
+    height: calc(100% - 15px);
+    width: 1px;
+    background-color: var(--accent-violet);
+}
+
+.timeline-item:last-child:after {
+    display: none;
+}
+
+/* Skills Carousel */
+.scrolling-container {
+    overflow: hidden;
+    border: 1px solid #2D3748;
+    border-radius: 9999px;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scrolling-track {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-carousel 15s linear infinite;
+}
+
+.scrolling-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-item {
+    flex-shrink: 0;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo-item img {
+    height: 64px;
+    width: 64px;
+    filter: grayscale(100%) brightness(150%);
+    transition: filter 0.3s;
+}
+
+.logo-item img:hover {
+    filter: grayscale(0%) brightness(100%);
+}
+
+@keyframes scroll-carousel {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
